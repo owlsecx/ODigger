@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Username reconnaissance across 100+ platforms.
+ODigger performs username OSINT across a large set of platforms to help authorised investigators map online presence. It supports single and batch usernames, optional variation generation, category filters, and multiple export formats. Offline and proxy options support constrained or privacy-sensitive assessments.
 
 ---
 
 ## ✨ Features
 
-- Username OSINT — 100+ platforms, email candidates, offline sandbox
+- Username hunting across 100+ platforms with category filters
+- Batch scans from a username list file
+- Optional common variation generation for a seed username
+- Configurable threads, timeouts, and HTTP/SOCKS proxy support
+- Export to TXT/JSON/CSV/HTML (or all) with quiet/JSON modes
+- Offline mode for sandboxed or air-gapped review workflows
 
 ---
 
@@ -38,7 +43,10 @@ Username reconnaissance across 100+ platforms.
 ## 🚀 Usage
 
 ```bash
-./ODigger
+./ODigger -u alice
+./ODigger -b usernames.txt -t 20 --export json -o reports/
+./ODigger -u alice --variations -c social --offline
+./ODigger --help
 ```
 
 ---
